@@ -1,4 +1,4 @@
-# AutoHub
+# AutoHub ⚙️
 
 Sistema de gestão para oficina mecânica.
 
