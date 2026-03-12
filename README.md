@@ -1,22 +1,21 @@
-# AutoHub - Backend
+# AutoHub
 
-Backend do projeto **AutoHub**, um sistema de gestão para oficina mecânica.
+Sistema de gestão para oficina mecânica.
 
-O objetivo do sistema é centralizar o controle operacional da oficina, permitindo gerenciar clientes, veículos, ordens de serviço, peças utilizadas, serviços executados, pagamentos e acompanhamento do andamento do serviço.
+## Stack do projeto
 
-## Tecnologias utilizadas
+- **Back-end:** Java Spring Boot
+- **Banco de dados:** PostgreSQL
+- **Migrações:** Flyway
+- **Front-end:** Angular
 
-- Java
-- Spring Boot
-- Spring Web
-- Spring Data JPA
-- PostgreSQL
-- Flyway
-- Maven
+## Descrição
 
-## Objetivo do projeto
+O **AutoHub** foi projetado para centralizar o controle operacional de uma oficina mecânica, permitindo gerenciar clientes, veículos, ordens de serviço, peças utilizadas, serviços executados, pagamentos e acompanhamento do andamento do serviço.
 
-O AutoHub foi pensado para atender as principais rotinas de uma oficina mecânica, oferecendo uma base estruturada para:
+## Objetivo
+
+A proposta do sistema é oferecer uma base estruturada para as principais rotinas da oficina, como:
 
 - cadastro de clientes
 - cadastro de veículos
@@ -27,6 +26,30 @@ O AutoHub foi pensado para atender as principais rotinas de uma oficina mecânic
 - histórico de status da ordem de serviço
 - consulta de histórico por placa
 - acompanhamento do serviço pelo cliente
+
+## Arquitetura do projeto
+
+O projeto será dividido em:
+
+- **Back-end em Java Spring Boot**
+  - responsável pelas regras de negócio
+  - APIs REST
+  - integração com o banco
+  - autenticação e segurança futuramente
+
+- **Banco de dados PostgreSQL**
+  - armazenamento relacional dos dados do sistema
+  - estrutura modelada para o MVP e pronta para evolução
+
+- **Flyway**
+  - versionamento das alterações do banco
+  - controle de migrations
+  - padronização entre ambientes
+
+- **Front-end em Angular**
+  - interface do sistema
+  - consumo das APIs do back-end
+  - telas administrativas e acompanhamento do cliente
 
 ## Estrutura principal de dados
 
@@ -58,32 +81,25 @@ Algumas regras importantes da estrutura de dados:
 - o email do usuário deve ser único
 - o token de rastreamento público deve ser único
 
-## Stack de persistência
-
-O projeto utiliza:
-
-- **PostgreSQL** como banco de dados relacional
-- **Flyway** para versionamento e execução das migrações
-- **JPA / Hibernate** para mapeamento das entidades
-
-## Organização esperada do projeto
-
-Exemplo de organização da aplicação:
+## Organização esperada
 
 ```bash
-src/
- └─ main/
-     ├─ java/
-     │   └─ com/autohub/
-     │       ├─ config/
-     │       ├─ controller/
-     │       ├─ dto/
-     │       ├─ entity/
-     │       ├─ repository/
-     │       ├─ service/
-     │       └─ AutoHubApplication.java
-     └─ resources/
-         ├─ db/
-         │   └─ migration/
-         │       └─ V1__initial_schema.sql
-         └─ application.yml
+ backend/
+   └─ src/
+       └─ main/
+            ├─ java/
+            │   └─ com/autohub/
+            │       ├─ config/
+            │       ├─ controller/
+            │       ├─ dto/
+            │       ├─ entity/
+            │       ├─ repository/
+            │       ├─ service/
+            │       └─ AutoHubApplication.java
+            └─ resources/
+                ├─ db/
+                │   └─ migration/
+                │       └─ V1__initial_schema.sql
+                └─ application.yml
+frontend/
+     └─ src/
