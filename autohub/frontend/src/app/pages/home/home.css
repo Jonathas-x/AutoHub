@@ -1,3 +1,9 @@
+body{
+  background: #F3F4F6;
+  height: 100%;
+  margin: 0;
+}
+
 .demo-table {
   width: 100%;
 }
@@ -20,5 +26,24 @@
 }
 .principal{
   width: 80%;
-  margin: 0 auto;
+  margin: 50px auto;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 20px;
+  color: #111827;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+.example-icon{
+  color: #111827;
+  background-color: #F3F4F6;
+}
+.demo-table{
+  width: 100%;
+  background-color: #FFFFFF;
+  color: #111827;
+}
+.mat-toolbar img{
+  height: 120px;
+  object-fit: contain;
+  margin-top: 40px;
 }
